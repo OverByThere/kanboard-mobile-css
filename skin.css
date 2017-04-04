@@ -1,2 +1,2 @@
 .views-switcher-component { width: 100%; }
-.views-switcher-component .views li { float:left; }
+.views-switcher-component .views li { float:left; margin-right:5px; }
