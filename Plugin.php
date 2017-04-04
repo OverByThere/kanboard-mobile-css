@@ -9,6 +9,7 @@ class Plugin extends Base
     public function initialize()
     {
         $this->hook->on("template:layout:css", array("template" => "plugins/kanboardMobileCss/skin.css"));
+        $this->hook->on("template:layout:js", array("template" => "plugins/kanboardMobileCss/skin.js"));
     }
 
     public function getPluginName()
@@ -23,7 +24,7 @@ class Plugin extends Base
 
     public function getPluginAuthor()
     {
-        return 'OverByDan';
+        return 'OverByThere';
     }
 
     public function getPluginVersion()
