@@ -3,13 +3,15 @@ function resizeBoard() {
 }
 $(document).ready(function() {
   if($(window).width()<767) {
+    resizeBoard();
     $('.views-switcher-component ul.views li a').each(function() {
       var icon = $('i',this).clone();
       $(this).html(icon);
     });
-    resizeBoard();
   }
 });
 $(window).on('resize',function() {
-  resizeBoard();
+  if($(window).width()<767) {
+    resizeBoard();
+  }
 });
