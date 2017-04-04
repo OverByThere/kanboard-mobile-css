@@ -1,2 +1,9 @@
-.views-switcher-component { width: 100%; }
-.views-switcher-component .views li { float:left; margin-right:5px; }
+
+.project-header .dropdown-component { float:left; width:auto; margin-right:10px; }
+.project-header .dropdown-component .dropdown { line-height: 2em; }
+.project-header .views-switcher-component { width: auto; float:left; }
+.project-header .views-switcher-component ul.views { margin:0; padding:0; }
+.project-header .views-switcher-component ul.views li { float:left; margin-right:5px; }
+
+.filter-box .input-addon input { width: 60%; flex:auto;}
+.filter-box .input-addon .input-addon-item { width:20%; }
