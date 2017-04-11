@@ -27,8 +27,9 @@ $(document).ready(function() {
       return false;
     });
     $('body').on('mousedown','#board-container .task-board', function(e) {
+      var ourItem = $(this);
       $(this).attr('data-state','mousedown').css({'opacity':0.5});
-      timeoutId = setTimeout(function displayContext() { displayPopupMenu(e,$(this)); }, 500);
+      timeoutId = setTimeout(function displayContext() { displayPopupMenu(e,ourItem); }, 500);
       e.preventDefault();
       return false;
     }).on('mouseup mousemove mouseleave', '#board-container .task-board', function(e) {
