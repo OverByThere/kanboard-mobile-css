@@ -2,9 +2,9 @@ function resizeBoard() {
   if($('#board-container').length>1) { $('#board-container').css({'min-height':($(window).height()-$('#board-container').offset().top)-10}); }
 }
 function displayPopupMenu(e,currentTask) {
-  if(!$('body').hasClass('contextMenuOpen')) {
+  if($('#dropdown').length==0) {
     $('body').addClass('contextMenuOpen');
-    $('body').append('<div id="dropdown" style="top:0; position:absolute; width:100%; "><ul class="dropdown-submenu-open"><li><strong>Move to:</strong></li></ul></div>');
+    $('body').append('<div id="dropdown" style="top:0; position:absolute; right:13px; left:10px; "><ul class="dropdown-submenu-open"><li><strong>Move to:</strong></li></ul></div>');
     $('#dropdown .dropdown-submenu-open').css({'top':e.pageY+'px','width':'100%','position':'absolute'});
     $('#dropdown').attr('data-task-id',$(currentTask).attr('data-task-id'));
     $('#dropdown').attr('data-column-id',$(currentTask).attr('data-column-id'));
@@ -42,11 +42,9 @@ $(document).ready(function() {
       })
       .done(function(data) {
         $('#board-container').replaceWith(data);
-        $('body').removeClass('contextMenuOpen');
       });
       e.preventDefault();
       $('#dropdown').remove();
-      $('body').removeClass('contextMenuOpen');
       return false;
     });
 
