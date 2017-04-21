@@ -1,5 +1,10 @@
 function resizeBoard() {
   if($('#board-container').length>1) { $('#board-container').css({'min-height':($(window).height()-$('#board-container').offset().top)-10}); }
+  if($(window).width()<767) {
+    console.log($('.project-header').width());
+    $('#board th.board-column-header').css({'width':($('.project-header').width()-8)+'px'});
+  }
+  else { $('#board th.board-column-header').removeAttr('style'); }
 }
 function displayPopupMenu(e,currentTask) {
   if($('#dropdown').length==0) {
@@ -20,6 +25,7 @@ function displayPopupMenu(e,currentTask) {
 
 $(document).ready(function() {
   if($(window).width()<767) {
+    $('header').append($('.project-header .dropdown-component'));
     var timeoutId = 0;
     $('body').on('mousedown','#board-container .task-board', function(e) {
       var ourItem = $(this);

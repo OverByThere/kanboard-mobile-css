@@ -1,16 +1,26 @@
 @media (max-width: 768px) {
+  header { display: block; float:left; width:100%; padding-bottom:5px; }
+  header .title-container { width:auto; float:left; }
+  header .menus-container { width:auto; float:none; }
+  header .board-selector-container { width:75%; float:left; }
+  header .dropdown-component { width:25%; float:right; text-align: right; }
+
   .project-header { width:100%; float:left; }
   .sidebar-container { width:100%; float:left; }
   #board-container { width:100%; float:left; }
 
   .project-header .dropdown-component { float:left; width:auto; margin-right:10px; }
   .project-header .dropdown-component .dropdown { line-height: 2em; }
-  .project-header .views-switcher-component { width: auto; float:left; }
+  .project-header .views-switcher-component { width:46%; margin:0; width: auto; float:right; }
   .project-header .views-switcher-component ul.views { margin:0; padding:0; }
-  .project-header .views-switcher-component ul.views li { float:left; margin-right:5px; }
+  .project-header .views-switcher-component ul.views li { float:left; margin:0 5px 0 0; }
+  .project-header .views-switcher-component ul.views li:last-child { margin-right:0; }
 
-  .filter-box { width:100%; float:left; }
-  .filter-box .input-addon input { width: 60%; flex:auto;}
-  .filter-box .input-addon .input-addon-item { width:20%; }
+  .filter-box-component { float:left; width:53%; }
+  .filter-box-component .filter-box { width:100%; float:left; }
+  .filter-box-component .filter-box .input-addon { box-sizing: border-box; }
+  .filter-box-component .filter-box .input-addon input { box-sizing: border-box;width: 60%; flex:auto;}
+  .filter-box-component .filter-box .input-addon .input-addon-item { box-sizing: border-box; width:20%; padding:4px 0.25em; }
+  .filter-box-component .filter-box .input-addon .input-addon-field { box-sizing: border-box; padding:4px 0.25em;  font-size: 0.9em; }
 
 }
